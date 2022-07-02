@@ -1,29 +1,30 @@
 from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
-import uuid
 
 app = FastAPI()
 
-app.mount('/static', StaticFiles(directory='static'), name='static')
-templates = Jinja2Templates(directory='templates')
-
 
 def createDb(quantity):
-    arr = [(uuid.uuid4(), x) for x in range(quantity)]
-    result = {}
-    for key, value in arr:
-        result[key] = value
-
+    result = [(x, 'q') for x in range(quantity)]
     return result
+
+
+db = createDb(1000000)
 
 
 @app.get("/")
 async def root():
-    return templates.TemplateResponse('base.html', {})
+    return db
 
 
 @app.get('/request')
-async def request():
-    db = createDb(1000000)
-    return templates.TemplateResponse('response.html', {'db': db})
+async def request(page_num: int = 1, page_size: int = 10):
+    start = (page_num - 1) * page_size
+    end = start + page_size
+    return db[start:end]
+
+
+@app.get('/find')
+async def find(id: int):
+    for key, value in db:
+        if key == id:
+            return db[key]

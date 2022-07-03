@@ -8,7 +8,7 @@ La empresa Stratton Oakmont necesita una nueva arquitectura para su backend ya q
  - Optimizar la respuesta de los endpoints
  
 ## arquitectura
-<img src="C:\Users\feder\Desktop\fastApitest\arquitectura.jpeg" alt="My cool logo" width="350" height="350"/>
+<img src="C:\Users\feder\Desktop\fastApitest\arquitectura.jpeg" alt="arquitectura img" width="350" height="350"/>
  
 ### Porqué se escogió este framework
  

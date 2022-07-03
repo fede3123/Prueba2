@@ -8,7 +8,7 @@ La empresa Stratton Oakmont necesita una nueva arquitectura para su backend ya q
  - Optimizar la respuesta de los endpoints
  
 ## arquitectura
-<img src="" alt="My cool logo"/>
+<img src="C:\Users\feder\Desktop\fastApitest\arquitectura.jpeg" alt="My cool logo"/>
  
 ### Porqué se escogió este framework
  
@@ -29,10 +29,10 @@ Este proyecto se basa en un micro servicio haciendo que la robustez de django se
   GET /api/request/${page_num}&${page_size}
 ```
  
-| Parámetros | Tipo     | Descripción                |
-| :-------- | :------- | :------------------------- |
+| Parámetros  | Tipo      | Descripción                                   |
+|:------------|:----------|:----------------------------------------------|
 | `page_size` | `integer` | **Obligatorio** define la cantidad de objetos |
-| `page_num` | `integer` | **Obligatorio** define que pagina quiere|
+| `page_num`  | `integer` | **Obligatorio** define que pagina quiere      |
  
 #### Buscar un id especifico
  
@@ -40,7 +40,7 @@ Este proyecto se basa en un micro servicio haciendo que la robustez de django se
   GET /api/find/${id}
 ```
  
-| Parámetros | Tipo     | Descripción                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `integer` | **Obligatorio** Define que id se quiere buscar|
+| Parámetros | Tipo      | Descripción                                    |
+|:-----------|:----------|:-----------------------------------------------|
+| `id`       | `integer` | **Obligatorio** Define que id se quiere buscar |
  
